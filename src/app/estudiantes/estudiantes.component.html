@@ -1,0 +1,73 @@
+<img src="/assets/images/universidad2.JPG" alt="" class="cls-image-universidad">
+
+<div class="d-flex flex-row">
+<div>
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h2>Administrador</h2>
+        </div>
+        <ul class="list-unstyled components">
+            <li>
+                <a href="http://localhost:4200/estudiantes" >Estudiantes</a>
+            </li>            
+            <li>
+                <a href="#">Docentes</a>
+            </li>
+            <li>
+                <a href="http://localhost:4200/pacademicos" >Programas</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<!--<div class="d-flex flex-row">
+    <div *ngFor="let item1 of listaUsuarios" class="card m-3" style="width: 18rem; background:rgb(170, 166, 166);">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">Nombre: {{item1.nombre}} <p>
+        <p class="card-text">Apellidos: {{item1.apellidos}} <p>
+          <p class="card-text">Email: {{item1.correo}}</p>
+          <p class="card-text">Dir: {{item2.direccion}}</p>
+          <p class="card-text">Tel: {{item2.telefono}}</p>
+          <a href="#" class="btn btn-primary">Editar</a>
+        </div>
+    </div>
+</div>-->
+<div class="d-flex flex-row m-5">    
+    <table class="table table-hover" style="width: 60rem; background:rgb(170, 166, 166);">
+        <thead><h1>Estudiantes</h1></thead>
+        <thead>
+            <td><h4>Nombre</h4></td>
+            <td><h4>Apellidos</h4></td>
+            <td><h4>Correo</h4></td>
+            <td><h4>Acciones</h4></td>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item1 of listaUsuarios" style="width: 18rem; background:rgb(170, 166, 166);">
+                <td>{{item1.nombre}}</td>
+                <td>{{item1.apellidos}}</td>
+                <td>{{item1.correo}}</td>
+                <td>
+                    <button type="button" class="btn btn-primary">Editar</button>
+                    <a>-</a>
+                    <button type="button" class="btn btn-primary">Borrar</button>
+                </td>               
+            </tr>
+            <tr>
+                <td>
+                    <input formControlName="nombre" type="text" class="form-control" id="nombre" aria-describedby="nombre" required>
+                </td>
+                <td>
+                    <input formControlName="apellidos" type="text" class="form-control" id="apellidos" aria-describedby="apellidos" required>
+                </td> 
+                <td>
+                    <input formControlName="correo" type="email" class="form-control" id="correo" aria-describedby="correo" required>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-primary">Agregar</button>
+                </td>   
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>

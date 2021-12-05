@@ -1,0 +1,34 @@
+<img src="/assets/images/universidad2.JPG" alt="" class="cls-image-universidad">
+
+<div class="d-flex flex-row">
+  <div>
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h2>Administrador</h2>
+        </div>
+        <ul class="list-unstyled components">
+            <li>
+                <a href="http://localhost:4200/estudiantes" >Estudiantes</a>
+            </li>            
+            <li>
+                <a href="#">Docentes</a>
+            </li>
+            <li>
+                <a href="http://localhost:4200/pacademicos" >Programas</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div class="d-flex flex-row">
+    <div *ngFor="let item of listaPacademicos" class="card m-3" style="width: 18rem; background:rgb(170, 166, 166);">
+        <!--<img class="card-img-top" src="..." alt="Card image cap">-->
+        <div class="card-body">
+          <h5 class="card-title">{{item.nombre}}</h5>
+          <p class="card-text">Modalidad: {{item.modalidad}}</p>
+          <p class="card-text">Créditos: {{item.creditos}}</p>
+          <a href="#" class="btn btn-primary">Editar</a>
+        </div>
+    </div>
+</div>
+</div>
